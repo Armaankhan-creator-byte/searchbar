@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-color: #db4325;
+}
+.circle{
+    color:#db4325;
+    width:40px;
+    height:40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+   
+}
+.circle:hover{
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.circle svg{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:  translate(-50%,-50%);
+}
+svg:hover{
+    cursor: pointer;
+}
+.input{
+    display:none;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    position: relative;
+    animation:wid 1s linear  normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes wid {
+    0%{
+        width:0px;
+    }
+    10%{
+        width:100px;
+    }
+    50%{
+        width:200px;
+    }
+    100%{
+        width:300px;
+    }
+    
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input{
+    width:200px;
+    height:30px;
+    border-radius: 50px;
+    padding-left: 10px;
+    animation:widt 1s linear  normal;
 }
+@keyframes widt {
+    0%{
+        width:0px;
+    }
+    10%
+    {
+        width:50px;
+    }
+    50%{
+        width:100px;
 
-.App-link {
-  color: #61dafb;
+    }
+    100%{
+        width:200px;
+    }
+    
+} 
+input:focus{
+    outline:none;
+    border:1px solid #db4325;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search{
+width:50px;
+height:30px;
+background-color: #db4325;
+border:1px solid #c9afaf;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+position: absolute;
+right:10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.search svg{
+    color:#fff;
 }
